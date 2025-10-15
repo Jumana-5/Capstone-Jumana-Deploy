@@ -149,9 +149,9 @@ else:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('ClosedSooqDB'),  # same name as your .env file
+        'NAME': os.getenv('','ClosedSooqDB'),  # same name as your .env file
         'USER': 'postgres',
-        'PASSWORD': os.getenv('sqlnoob5'),
+        'PASSWORD': os.getenv('', 'sqlnoob5'),
         'HOST': 'localhost',  
         'PORT': '5432',
     }

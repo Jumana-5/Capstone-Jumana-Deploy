@@ -22,7 +22,7 @@ class item(models.Model):
     price_in_JOD = models.IntegerField(null=True)
 
     #item_category = models.ForeignKey(category, on_delete=models.CASCADE)
-    categories = models.ManyToManyField(category, related_name='items', default='other')
+    categories = models.ManyToManyField(category, related_name='items', null = True)
     creator = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='items')
 
     item_image = models.ImageField(upload_to='images/', default ='default.jpg') # Images will be stored in media/images/

@@ -168,3 +168,6 @@ CapstoneJumana/
 
 ---
 
+##Deployed App Link
+
+https://capstone-jumana-closedsooq.onrender.com/

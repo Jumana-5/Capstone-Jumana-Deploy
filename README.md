@@ -1,8 +1,10 @@
 # ClosedSooq – Online garage sale
+![ClosedSooqHome](https://github.com/user-attachments/assets/8fc756a1-ec28-41de-9994-a81f196ec940)
+![ClosedSooqItemList](https://github.com/user-attachments/assets/f83bc53b-ea46-444f-859a-6f80193f749f)
+![ClosedSooqCreate](https://github.com/user-attachments/assets/c15ea93b-0dbe-4fd8-b026-80a4929dbc60)
 
-![ClosedSooqHome](https://git.generalassemb.ly/jumanadodin/Capstone-Jumana/assets/55695/d780f6c6-d81f-4293-bb06-09c5cbe43908)
-![ClosedSooqItemList](https://git.generalassemb.ly/jumanadodin/Capstone-Jumana/assets/55695/411e17be-7cab-425e-a603-7d1747e4d3eb)
-![ClosedSooqCreate](https://git.generalassemb.ly/jumanadodin/Capstone-Jumana/assets/55695/08e430b3-78b3-4af1-bd99-5dd85443e9ce)
+
+
 
 
 
@@ -60,7 +62,9 @@ ClosedSooq is a website for listing used or otherwise unwanted items for sale on
 ## ERD Overview
 
 **Original ERD in the design phase**
-![souq1-ERD](https://git.generalassemb.ly/jumanadodin/Capstone-Jumana/assets/55695/d0c6cbfb-2f85-4b8e-93f3-626152a51316)
+![souq1-ERD](https://github.com/user-attachments/assets/831cff42-b878-4052-93e0-02ea1da9986a)
+
+
 
 
 
@@ -164,6 +168,5 @@ CapstoneJumana/
 
 ---
 
-## Deployed App Link
 
 https://capstone-jumana-closedsooq.onrender.com/

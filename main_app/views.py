@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy, reverse
 from django.views.generic import FormView, CreateView
 from .models import item, category, User
-from .forms import itemForm
+from .forms import itemForm, categoryForm
 from django.contrib.auth.decorators import login_required, user_passes_test
 # Create your views here.
 
@@ -66,6 +66,21 @@ def create_item(request):
         form = itemForm()
         return render(request,'items/item-form.html',{'form': form})
     
+
+@login_required
+def create_category(request):
+    if request.method == 'POST':
+      form = categoryForm(request.POST)
+      if form.is_valid(): 
+          category = form.save(commit = False)          
+          category.save()
+          form.save_m2m()
+          return redirect(reverse('category_list'))
+      else:
+          return render(request,'categories/create-category.html',{'form': form})
+    elif request.method == 'GET':
+        form = categoryForm()
+        return render(request,'categories/create-category.html',{'form': form})    
 
 # Update
 

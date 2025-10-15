@@ -15,6 +15,7 @@ urlpatterns = [
     path('items/<int:id>/delete',views.delete_item, name='delete_item'),
     path('categories/',views.category_list, name='category_list'),
     path('categories/<int:id>/',views.category_details, name='category_details'),
+    path('categories/create/', views.create_category, name='create_category'),
     path('auth/signup/', views.SignUpView.as_view(), name='signup')
 
 ]

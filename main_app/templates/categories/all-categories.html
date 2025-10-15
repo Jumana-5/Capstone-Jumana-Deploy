@@ -1,7 +1,6 @@
 {% extends "base.html"%}
 
-
-    {% block content %}
+{% block content %}
      <h1>All categories:</h1>
 
         <ol>
@@ -10,6 +9,8 @@
             {% endfor %}
 
         </ol>
+
+        <a class = 'accountItem' href="{% url 'create_category'%}">Create category </a>
 
     {% endblock content %}
 

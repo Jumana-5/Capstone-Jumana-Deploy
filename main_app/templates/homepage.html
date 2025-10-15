@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+    {% block content %}
+        
+        
+        {% if user.is_authenticated == False %}
+            <h1>Welcome to Closed Sooq, your favorite online garage sale!</h1>
+            <h2>To create a post for an item you'd like to sell, please log in or sign up</h2>
+        {% else %}
+            <h1>{{user.username}}, welcome to Closed Sooq, your favorite online garage sale!</h1>
+            <h2>You can post an item for sale in the "Create item" page!</h2>
+        {% endif %}
+        <ol>
+
+
+        </ol>
+
+    {% endblock content %}
+
+
+  

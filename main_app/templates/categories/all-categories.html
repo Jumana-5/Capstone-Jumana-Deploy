@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+
+    {% block content %}
+     <h1>All categories:</h1>
+
+        <ol>
+            {% for category in all_categories %}
+                <li><a href="/categories/{{category.category_id}}/"> {{category.category_name}}</a></li>
+            {% endfor %}
+
+        </ol>
+
+    {% endblock content %}
+
+   

@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+
+    {% block content %}
+     <h1>All items on sale</h1>
+
+        <ol>
+            {% for item in all_items %}
+                <li><a href="/items/{{item.item_id}}/"> {{item.item_name}}</a></li>
+            {% endfor %}
+
+        </ol>
+
+    {% endblock content %}
+
+   

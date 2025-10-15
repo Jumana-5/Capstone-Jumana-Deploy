@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closed Sooq</title>
+     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    {% block head %}
+    {% endblock head %}
+    <style>
+        .field-error{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id = "websiteTitle">Closed Sooq</h1>
+    <div>
+        <a class = "homeNav" href="{% url 'homepage'%}">Home  </a> |
+        <a class = "homeNav" href="{% url 'item_list'%}">Item list  </a> |
+        <a class = "homeNav" href="{% url 'category_list'%}">Category list  </a>
+    </div>
+          {% if user.is_authenticated %}
+                <div class = "account">
+                
+                <a class = 'accountItem' href="{% url 'item_create'%}">Create item  </a>  |
+                <a class = 'accountItem' href="{% url 'my_item_list'%}">My item list  </a>
+                <form method='post' action="{% url 'logout'%}">
+                    {% csrf_token %}
+                    <span class = "account" id = "accountName" > {{user.username}}  |  </span>
+                    <button class = 'account'>Logout</button>
+                </form>
+                
+
+        {% else %}
+        <div class = 'account'>
+        <a class = 'accountItem' href="{% url 'signup'%}">Signup</a>
+        <a class = 'accountItem' href="{% url 'login'%}">Login</a>
+        </div>
+        {% endif %}
+        </div>
+
+
+        
+        
+
+    </div>
+    </header>
+    {% block content %}
+    {% endblock content %}
+
+</body>
+</html>

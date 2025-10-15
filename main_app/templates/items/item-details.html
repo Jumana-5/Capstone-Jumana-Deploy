@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+    {% block content %}
+
+        <h1>{{item.item_name}}</h1>
+        <h2>Seller: {{item.creator}}</h2>
+        <p></p>
+
+
+
+        <h2>Pictures:</h2>
+        <p>{{item.item_image}}</p>
+        
+        <h2>Price: {{item.price_in_JOD}} JOD</h2>
+
+        <h2>Description:</h2>
+        <p>{{item.item_description}}</p>
+
+
+        <h2></h2>
+        {% if item.is_used %}
+            <p>Item condition: used</p>
+        {% else %}
+            <p>Item condition: new</p>
+        {% endif %}
+
+        
+        <p></p>
+        
+        <h2>Categories:</h2>
+        {% for category in item.categories.all %}
+            <p> -{{category.category_name}}</p>
+        {% endfor %}
+            
+        <h2></h2>
+        <p></p>
+
+        
+
+
+        {% comment "" %}  {% if item.creator == user.username %}{% endif %} 
+        <a href="/items/{{item.item_id}}/edit">Edit item</a>
+      
+        
+
+        
+        <form action="/items/{{item.item_id}}/delete" method='post'>
+            {% csrf_token %}
+            <button>Delete item</button>
+        </form>
+        {% endcomment %}
+    {% endblock content %}
+
+   
